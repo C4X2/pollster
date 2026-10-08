@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:pollsterdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+logging:
+  level:
+    com.pollster: DEBUG
+
+pollster:
+  durations:
+    - minutes: null
+      label: "Never expire"
+    - minutes: 15
+      label: "15 Minutes"
+    - minutes: 60
+      label: "1 Hour"
+    - minutes: 1440
+      label: "24 Hours"
+    - minutes: 10080
+      label: "7 Days"

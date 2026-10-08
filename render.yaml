@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pollster
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8085
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:sqlite:/app/data/pollster.db

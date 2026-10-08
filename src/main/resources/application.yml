@@ -1,0 +1,30 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: pollster
+  datasource:
+    url: jdbc:sqlite:pollster.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+logging:
+  level:
+    com.pollster: DEBUG
+    org.springframework.web: INFO
+
+pollster:
+  durations:
+    - minutes: 15
+      label: "15 Minutes"
+    - minutes: 60
+      label: "1 Hour"
+    - minutes: 1440
+      label: "24 Hours"
+    - minutes: 10080
+      label: "7 Days"

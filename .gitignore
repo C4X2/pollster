@@ -1,0 +1,26 @@
+# Gradle build files
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE & Editor files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.classpath
+.project
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Log files
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
